@@ -1,0 +1,7 @@
+case_id: C-FV04
+result: PASS
+origin: CONTROLLED_PERTURBATION
+first_divergence: TEMPORAL_VALIDITY
+causal_reconstruction: CONTROLLED_LOGICAL_DELAY
+evidence_sufficiency: PARTIALLY_SUPPORTED
+source_measurements_modified: false
