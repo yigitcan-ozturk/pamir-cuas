@@ -1,0 +1,13 @@
+case_id: C-FV02
+title: Radar/RF disagreement
+origin: CONTROLLED_PERTURBATION
+base_case: C-FV01
+immutable_source_payloads: true
+operation:
+  modality: RF_RECEIVER
+  type: EVIDENCE_AVAILABILITY_OVERRIDE
+  value: CONTRADICTORY_AT_OBSERVATION_LAYER
+  source_samples_modified: false
+expected_first_divergence: SENSOR_DISAGREEMENT
+expected_evidence_status: PARTIALLY_SUPPORTED
+purpose: Validate disagreement localization without relabeling the underlying real measurement.
