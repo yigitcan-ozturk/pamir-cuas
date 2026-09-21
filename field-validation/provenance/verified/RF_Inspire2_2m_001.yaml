@@ -1,0 +1,27 @@
+dataset_id: TSMS-Drone
+source_doi: 10.25452/figshare.plus.30027313
+sensor: RF_RECEIVER
+target: Inspire 2
+distance_m: 2
+sample_index: 1
+source_filename: Inspire 2_2m_001.mat
+bytes: 612511
+sha256: e0d6906f9e86f4176a5d605637e055d1970926569f37c170442f2563fc376f33
+md5: 609aa19b078bf461ddf129805c0ba045
+matlab_format: MATLAB_5
+matlab_created: "Fri Jul 11 10:00:42 2025"
+variables:
+  data:
+    shape: [131072, 1]
+    dtype: complex128
+    complex: true
+contract:
+  expected_variable: data
+  expected_normalized_shape: [131072]
+  result: PASS
+evidence_origin: REAL_MEASUREMENT
+source_integrity_status: VERIFIED_LOCAL_PAYLOAD
+notes:
+  - Hashes were independently computed from the uploaded source payload.
+  - Filename, target, distance and sample index align with the verified CW and FMCW samples.
+  - Cross-sensor filename/index identity is established; acquisition-time synchronization is not inferred from filename identity alone.
