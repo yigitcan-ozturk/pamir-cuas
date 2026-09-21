@@ -1,0 +1,14 @@
+case_id: C-FV04
+title: Stale or delayed observation
+origin: CONTROLLED_PERTURBATION
+base_case: C-FV01
+immutable_source_payloads: true
+operation:
+  modality: RF_RECEIVER
+  type: LOGICAL_DELAY_INJECTION
+  source_samples_modified: false
+  delay_value: SYMBOLIC_OUTSIDE_ACCEPTANCE_WINDOW
+expected_first_divergence: TEMPORAL_VALIDITY
+expected_evidence_status: PARTIALLY_SUPPORTED
+notes:
+  - No physical latency magnitude is fabricated; the perturbation exercises the stale-evidence state transition.
