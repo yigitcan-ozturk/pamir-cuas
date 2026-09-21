@@ -6,8 +6,18 @@ verified_payloads:
     sample_index: 1
     sha256: ea024a8e50a82ee0ca55a2dc235563db898b2509c49ece2c115703701ad2d6fa
     mat_contract: PASS
+  - sensor: FMCW_RADAR
+    target: Inspire 2
+    distance_m: 2
+    sample_index: 1
+    sha256: 53a73f340ac13f4ed4fac5ac92a5d0743f0c1a72405c84aaa00db7cd342c3bbc
+    mat_contract: PASS
 pending_matching_payloads:
-  - FMCW_RADAR
   - RF_RECEIVER
-aligned_triplet_status: INCOMPLETE_1_OF_3
-cfv01_status: BLOCKED_SOURCE_INTEGRITY
+cross_sensor_identity:
+  target: Inspire 2
+  distance_m: 2
+  sample_index: 1
+  cw_fmcw_match: PASS
+aligned_triplet_status: INCOMPLETE_2_OF_3
+cfv01_status: BLOCKED_PENDING_RF_SOURCE_INTEGRITY
