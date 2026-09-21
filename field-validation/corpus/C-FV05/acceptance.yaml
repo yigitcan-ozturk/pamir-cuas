@@ -1,0 +1,12 @@
+id: C-FV05
+name: synchronization perturbation
+evidence_origin: CONTROLLED_PERTURBATION
+perturbation: SEQUENTIAL_INDEX_OFFSET
+source_alignment_model: SEQUENTIAL_LOOP_INDEX
+acceptance:
+  immutable_source_reference: true
+  affected_sensor_recorded: true
+  injected_index_offset_recorded: true
+  first_divergence_recorded: true
+  no_claim_of_hardware_clock_drift: true
+status: HARNESS_READY_SOURCE_PENDING
