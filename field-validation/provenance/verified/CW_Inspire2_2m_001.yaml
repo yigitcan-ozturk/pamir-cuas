@@ -1,0 +1,25 @@
+dataset_id: TSMS-Drone
+source_doi: 10.25452/figshare.plus.30027313
+sensor: CW_RADAR
+target: Inspire 2
+distance_m: 2
+sample_index: 1
+source_filename: Inspire 2_2m_001.mat
+bytes: 63555
+sha256: ea024a8e50a82ee0ca55a2dc235563db898b2509c49ece2c115703701ad2d6fa
+md5: 155c7ad3e1fcde6d03e9632320e8c484
+matlab_format: MATLAB_5
+variables:
+  data:
+    shape: [16384, 1]
+    dtype: complex128
+contract:
+  expected_variable: data
+  expected_normalized_shape: [16384]
+  result: PASS
+evidence_origin: REAL_MEASUREMENT
+source_integrity_status: VERIFIED_LOCAL_PAYLOAD
+notes:
+  - SHA-256 and MD5 were independently computed from the uploaded source payload.
+  - Repository-provided checksum comparison remains pending.
+  - This verifies one CW source measurement only; it does not complete the three-sensor C-FV01 gate.
