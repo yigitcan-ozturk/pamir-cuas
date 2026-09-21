@@ -1,0 +1,21 @@
+case_id: C-FV07
+title: Non-drone false-positive stress
+dataset: TSMS-Drone
+evidence_origin: REAL_MEASUREMENT
+canonical_tuple:
+  target: Corner Reflector
+  distance_m: 2
+  sample_index: 1
+source_integrity: PASS
+verified_modalities: [CW_RADAR, FMCW_RADAR, RF_RECEIVER]
+non_drone_ground_truth: CORNER_REFLECTOR
+observation_status: VALID_NONDEGENERATE_ALL_MODALITIES
+semantic_false_positive_test:
+  status: NOT_YET_CLASSIFIER_SCORED
+  rationale: Source-level non-drone evidence is verified, but no validated drone/non-drone classifier threshold is introduced.
+first_divergence: NONE_AT_SOURCE_INTEGRITY_LAYER
+evidence_sufficiency: SUFFICIENT_FOR_NON_DRONE_SOURCE_STRESS
+result: PASS_SOURCE_LEVEL
+limitations:
+  - This PASS does not claim a measured false-positive rate.
+  - A classifier-level false-positive claim requires a validated decision model and corpus-scale evaluation.
