@@ -1,0 +1,11 @@
+{
+  "evidence_object_version": "0.1",
+  "case_id": "C-FV03",
+  "evidence_origin": "CONTROLLED_PERTURBATION",
+  "base_case": "C-FV01",
+  "source_measurements_modified": false,
+  "first_divergence": "EVIDENCE_AVAILABILITY",
+  "causal_reconstruction": "RF_OBSERVATION_WITHHELD",
+  "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+  "result": "PASS"
+}
