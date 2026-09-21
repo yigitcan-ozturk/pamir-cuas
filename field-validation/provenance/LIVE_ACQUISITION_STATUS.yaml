@@ -1,0 +1,21 @@
+gate: A_SOURCE_INTEGRITY
+dataset: TSMS-Drone
+dataset_doi: 10.25452/figshare.plus.30027313
+live_repository_resolution:
+  status: BLOCKED_IN_CURRENT_EXECUTION_ENVIRONMENT
+  reason: Public Figshare API/file inventory could not be resolved from the current network tool path.
+verified_publication_contract:
+  status: COMPLETE
+payload_inventory:
+  status: PENDING
+payload_download:
+  status: PENDING
+sha256:
+  status: PENDING
+mat_contract_validation:
+  status: PENDING
+cfv01_real_execution:
+  status: BLOCKED_SOURCE_INTEGRITY
+policy:
+  - Do not fabricate repository file IDs, URLs, checksums, or payload hashes.
+  - Resume Gate A immediately when the public repository record or payload is available.
