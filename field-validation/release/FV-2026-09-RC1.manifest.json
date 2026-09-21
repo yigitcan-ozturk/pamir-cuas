@@ -1,0 +1,16 @@
+{
+  "release_id": "FV-2026-09-RC1",
+  "programme": "PAMIR-CUAS Public Real-World Field Validation",
+  "branch": "field-validation",
+  "dataset": {
+    "id": "TSMS-Drone",
+    "doi": "10.25452/figshare.plus.30027313"
+  },
+  "cases": ["C-FV01","C-FV02","C-FV03","C-FV04","C-FV05","C-FV06","C-FV07"],
+  "real_measurement_cases": ["C-FV01","C-FV07"],
+  "controlled_perturbation_cases": ["C-FV02","C-FV03","C-FV04","C-FV05","C-FV06"],
+  "source_policy": "IMMUTABLE",
+  "corpus_audit": "PASS",
+  "release_status": "RELEASE_CANDIDATE",
+  "next_tier": "INDEPENDENT_INDUSTRY_VALIDATION"
+}
