@@ -1,0 +1,11 @@
+id: C-FV03
+name: missing sensor evidence
+evidence_origin: CONTROLLED_PERTURBATION
+perturbation: SENSOR_DROPOUT
+acceptance:
+  immutable_source_reference: true
+  dropped_sensor_recorded: true
+  pre_perturbation_hashes_present: true
+  evidence_sufficiency_degrades: true
+  no_source_file_modified: true
+status: HARNESS_READY_SOURCE_PENDING
