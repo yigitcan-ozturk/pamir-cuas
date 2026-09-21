@@ -1,0 +1,10 @@
+{
+  "programme": "PAMIR-CUAS Real-World Field Validation Programme",
+  "corpus": "PAMIR-CUAS-Field-Validation-v1",
+  "dataset": "TSMS-Drone",
+  "cases": ["C-FV01","C-FV02","C-FV03","C-FV04","C-FV05","C-FV06","C-FV07"],
+  "source_manifest": null,
+  "code_commit": null,
+  "generated_at": null,
+  "institutional_evidence_pack_ready": false
+}
