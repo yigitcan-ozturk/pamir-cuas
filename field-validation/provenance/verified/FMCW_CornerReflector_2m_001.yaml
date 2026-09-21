@@ -1,0 +1,21 @@
+dataset_id: TSMS-Drone
+sensor: FMCW_RADAR
+target: Corner Reflector
+distance_m: 2
+sample_index: 1
+source_filename: Corner Reflector_2m_001.mat
+bytes: 10213448
+sha256: be72ef28ebb67a342ec49ad25a3e390aa2a5a86f94636b8eb027d5d6c4e64ab9
+md5: 19bba5c15775c8226a5083eef4974adf
+matlab_format: MATLAB_7_3_HDF5
+variables:
+  RD:
+    stored_shape: [4096, 161]
+    matlab_logical_shape: [161, 4096]
+    dtype: complex128
+contract:
+  expected_variable: RD
+  expected_logical_shape: [161, 4096]
+  result: PASS
+evidence_origin: REAL_MEASUREMENT
+source_integrity_status: VERIFIED_LOCAL_PAYLOAD
