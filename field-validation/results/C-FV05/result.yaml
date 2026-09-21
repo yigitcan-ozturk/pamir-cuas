@@ -1,0 +1,7 @@
+case_id: C-FV05
+result: PASS
+origin: CONTROLLED_PERTURBATION
+first_divergence: TEMPORAL_ASSOCIATION
+causal_reconstruction: CONTROLLED_INDEX_MISMATCH
+evidence_sufficiency: INSUFFICIENT_EVIDENCE
+source_measurements_modified: false
