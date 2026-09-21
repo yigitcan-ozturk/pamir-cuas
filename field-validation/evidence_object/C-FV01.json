@@ -1,0 +1,14 @@
+{
+  "evidence_object_version": "0.1",
+  "case_id": "C-FV01",
+  "evidence_origin": "REAL_MEASUREMENT",
+  "dataset_id": "TSMS-Drone",
+  "canonical_tuple": {"target":"Inspire 2","distance_m":2,"sample_index":1},
+  "source_integrity": {"status":"PASS","verified_sensors":["CW_RADAR","FMCW_RADAR","RF_RECEIVER"]},
+  "association": {"identity_match":"PASS","time_sync_claim":"NOT_INFERRED_FROM_FILENAME_IDENTITY"},
+  "first_divergence": {"status":"NONE_AT_SOURCE_INTEGRITY_AND_IDENTITY_LAYER"},
+  "semantic_detection_agreement": "NOT_EVALUATED",
+  "fusion": "NOT_RUN",
+  "evidence_sufficiency": "PARTIALLY_SUPPORTED",
+  "result": "PARTIALLY_SUPPORTED"
+}
