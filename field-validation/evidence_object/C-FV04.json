@@ -1,0 +1,11 @@
+{
+  "evidence_object_version": "0.1",
+  "case_id": "C-FV04",
+  "evidence_origin": "CONTROLLED_PERTURBATION",
+  "base_case": "C-FV01",
+  "source_measurements_modified": false,
+  "first_divergence": "TEMPORAL_VALIDITY",
+  "causal_reconstruction": "CONTROLLED_LOGICAL_DELAY",
+  "evidence_sufficiency": "PARTIALLY_SUPPORTED",
+  "result": "PASS"
+}
