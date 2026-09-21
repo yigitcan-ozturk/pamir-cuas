@@ -1,0 +1,11 @@
+case_id: C-FV05
+title: Synchronization perturbation
+origin: CONTROLLED_PERTURBATION
+base_case: C-FV01
+immutable_source_payloads: true
+operation:
+  type: INDEX_ASSOCIATION_PERTURBATION
+  source_samples_modified: false
+  mapping: "RF index 001 -> nonmatching sequential index"
+expected_first_divergence: TEMPORAL_ASSOCIATION
+expected_evidence_status: INSUFFICIENT_EVIDENCE
