@@ -12,12 +12,18 @@ verified_payloads:
     sample_index: 1
     sha256: 53a73f340ac13f4ed4fac5ac92a5d0743f0c1a72405c84aaa00db7cd342c3bbc
     mat_contract: PASS
-pending_matching_payloads:
-  - RF_RECEIVER
+  - sensor: RF_RECEIVER
+    target: Inspire 2
+    distance_m: 2
+    sample_index: 1
+    sha256: e0d6906f9e86f4176a5d605637e055d1970926569f37c170442f2563fc376f33
+    mat_contract: PASS
 cross_sensor_identity:
   target: Inspire 2
   distance_m: 2
   sample_index: 1
-  cw_fmcw_match: PASS
-aligned_triplet_status: INCOMPLETE_2_OF_3
-cfv01_status: BLOCKED_PENDING_RF_SOURCE_INTEGRITY
+  cw_fmcw_rf_match: PASS
+  synchronization_claim: NOT_INFERRED_FROM_FILENAME_IDENTITY
+aligned_triplet_status: COMPLETE_3_OF_3
+gate_status: PASS
+cfv01_status: READY_FOR_EXECUTION
