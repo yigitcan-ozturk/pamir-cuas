@@ -1,0 +1,16 @@
+id: C-FV02
+name: radar/RF disagreement
+policy: OBSERVED_FIRST
+observed_case:
+  requirement: disagreement must be measurable in unmodified source observations
+  label: REAL_MEASUREMENT
+controlled_case:
+  requirement: if no suitable observed disagreement exists, perturbation must be explicit
+  label: CONTROLLED_PERTURBATION
+acceptance:
+  source_hashes_present: true
+  alignment_preserved: true
+  disagreement_metric_recorded: true
+  first_divergence_recorded: true
+  causal_claim_bounded_by_evidence: true
+status: AWAITING_SOURCE_ACQUISITION
