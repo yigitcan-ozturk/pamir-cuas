@@ -1,0 +1,25 @@
+dataset_id: TSMS-Drone
+title: Time-Synchronized Multi-Sensor Drone Dataset
+dataset_doi: 10.25452/figshare.plus.30027313
+version_doi: 10.25452/figshare.plus.30027313.v1
+associated_article_doi: 10.1038/s41597-026-06802-6
+dataset_license: CC-BY-4.0
+modalities: [CW_RADAR, FMCW_RADAR, RF_RECEIVER]
+target_classes:
+  commercial_drones: 4
+  non_drone_reference: 1
+measurement_distances_m: {start: 2, stop: 30, step: 2}
+repetitions_per_condition: 500
+alignment:
+  type: SOFTWARE_MASTER_LOOP
+  key: SEQUENTIAL_FILE_INDEX
+  hardware_gps_pps: false
+  claim: SUB_SECOND_ALIGNMENT
+formats:
+  CW_RADAR: {raw_extension: .mat, variable: data, shape: [16384], value_type: complex_vector}
+  RF_RECEIVER: {raw_extension: .mat, variable: data, shape: [262144], value_type: complex_vector}
+  FMCW_RADAR: {raw_extension: .mat, variable: RD, shape: [161, 4096], value_type: range_doppler_map}
+naming:
+  pattern: Model_Distance_Index.mat
+  example: Inspire 2_2m_001.mat
+status: SOURCE_PROFILE_VERIFIED_PAYLOAD_PENDING
