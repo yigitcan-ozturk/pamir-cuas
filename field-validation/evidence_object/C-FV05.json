@@ -1,0 +1,11 @@
+{
+  "evidence_object_version": "0.1",
+  "case_id": "C-FV05",
+  "evidence_origin": "CONTROLLED_PERTURBATION",
+  "base_case": "C-FV01",
+  "source_measurements_modified": false,
+  "first_divergence": "TEMPORAL_ASSOCIATION",
+  "causal_reconstruction": "CONTROLLED_INDEX_MISMATCH",
+  "evidence_sufficiency": "INSUFFICIENT_EVIDENCE",
+  "result": "PASS"
+}
