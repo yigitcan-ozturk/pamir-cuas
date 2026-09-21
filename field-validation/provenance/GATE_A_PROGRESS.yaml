@@ -1,0 +1,13 @@
+gate: A_SOURCE_INTEGRITY
+verified_payloads:
+  - sensor: CW_RADAR
+    target: Inspire 2
+    distance_m: 2
+    sample_index: 1
+    sha256: ea024a8e50a82ee0ca55a2dc235563db898b2509c49ece2c115703701ad2d6fa
+    mat_contract: PASS
+pending_matching_payloads:
+  - FMCW_RADAR
+  - RF_RECEIVER
+aligned_triplet_status: INCOMPLETE_1_OF_3
+cfv01_status: BLOCKED_SOURCE_INTEGRITY
