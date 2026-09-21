@@ -1,0 +1,17 @@
+id: C-FV01
+name: nominal multi-sensor agreement
+evidence_origin: REAL_MEASUREMENT
+source_requirements:
+  modalities: [FMCW_RADAR, CW_RADAR, RF_RECEIVER]
+  same_target: true
+  same_distance: true
+  alignment: SEQUENTIAL_LOOP_INDEX
+acceptance:
+  source_hashes_present: true
+  three_modalities_present: true
+  common_index_present: true
+  controlled_perturbation: false
+outputs:
+  - evidence_object.json
+  - reproducibility_manifest.json
+status: AWAITING_SOURCE_ACQUISITION
