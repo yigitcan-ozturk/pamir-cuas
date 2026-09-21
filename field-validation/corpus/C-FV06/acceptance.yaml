@@ -1,0 +1,10 @@
+id: C-FV06
+name: confidence collapse
+origin_policy: DERIVED_OR_CONTROLLED
+acceptance:
+  confidence_inputs_recorded: true
+  confidence_rule_versioned: true
+  first_collapse_recorded: true
+  missing_evidence_not_converted_to_zero_confidence: true
+  causal_claim_bounded_by_evidence: true
+status: HARNESS_READY_SOURCE_PENDING
