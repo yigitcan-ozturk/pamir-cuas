@@ -1,0 +1,21 @@
+dataset_id: TSMS-Drone
+title: Time-Synchronized Multi-Sensor Drone Dataset
+dataset_doi: 10.25452/figshare.plus.30027313
+paper_doi: 10.1038/s41597-026-06802-6
+year: 2026
+source_class: PUBLIC_REAL_WORLD_CONTROLLED_FIELD
+dataset_license: CC-BY-4.0
+modalities:
+  - FMCW_RADAR
+  - CW_RADAR
+  - RF_RECEIVER
+targets:
+  commercial_drone_count: 4
+  includes_non_drone_reference: true
+integrity:
+  original_files_immutable: true
+  sha256_required: true
+  source_manifest_required: true
+notes:
+  - Raw and processed source inventory must be recorded before execution.
+  - Exact source-file hashes are populated only after acquisition.
