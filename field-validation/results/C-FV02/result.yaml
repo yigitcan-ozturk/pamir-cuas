@@ -1,0 +1,7 @@
+case_id: C-FV02
+result: PASS
+origin: CONTROLLED_PERTURBATION
+first_divergence: SENSOR_DISAGREEMENT
+causal_reconstruction: CONTROLLED_RF_OBSERVATION_CONTRADICTION
+evidence_sufficiency: PARTIALLY_SUPPORTED
+source_measurements_modified: false
