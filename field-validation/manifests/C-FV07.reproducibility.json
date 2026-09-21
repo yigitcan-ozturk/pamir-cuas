@@ -1,0 +1,9 @@
+{
+  "manifest_version":"0.1",
+  "case_id":"C-FV07",
+  "dataset_id":"TSMS-Drone",
+  "tuple":{"target":"Corner Reflector","distance_m":2,"sample_index":1},
+  "fmcw":{"sha256":"be72ef28ebb67a342ec49ad25a3e390aa2a5a86f94636b8eb027d5d6c4e64ab9","variable":"RD","logical_shape":[161,4096]},
+  "source_payload_policy":"IMMUTABLE",
+  "result":"PASS_SOURCE_LEVEL"
+}
