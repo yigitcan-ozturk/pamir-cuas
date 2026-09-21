@@ -1,0 +1,13 @@
+{
+  "evidence_object_version":"0.1",
+  "case_id":"C-FV07",
+  "evidence_origin":"REAL_MEASUREMENT",
+  "dataset_id":"TSMS-Drone",
+  "canonical_tuple":{"target":"Corner Reflector","distance_m":2,"sample_index":1},
+  "source_integrity":"PASS",
+  "verified_modalities":["CW_RADAR","FMCW_RADAR","RF_RECEIVER"],
+  "ground_truth_class":"NON_DRONE_REFERENCE",
+  "source_level_stress":"PASS",
+  "classifier_false_positive_rate":"NOT_EVALUATED",
+  "evidence_sufficiency":"SUFFICIENT_FOR_NON_DRONE_SOURCE_STRESS"
+}
