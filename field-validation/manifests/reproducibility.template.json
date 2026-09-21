@@ -1,0 +1,12 @@
+{
+  "case_id": "",
+  "dataset_id": "TSMS-Drone",
+  "source_files": [],
+  "source_sha256": {},
+  "code_commit": "",
+  "parameters": {},
+  "perturbation": null,
+  "output_sha256": {},
+  "environment": {},
+  "reproduction_status": "NOT_RUN"
+}
