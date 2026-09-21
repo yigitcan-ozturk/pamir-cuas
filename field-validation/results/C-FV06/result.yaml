@@ -1,0 +1,8 @@
+case_id: C-FV06
+result: PASS
+origin: CONTROLLED_PERTURBATION
+first_divergence: EVIDENCE_SUFFICIENCY
+causal_reconstruction: CONTROLLED_MULTI_MODAL_EVIDENCE_LOSS
+evidence_sufficiency: INSUFFICIENT_EVIDENCE
+source_measurements_modified: false
+numeric_confidence_probability: NOT_ASSIGNED
