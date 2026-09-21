@@ -1,0 +1,11 @@
+id: C-FV07
+name: non-drone false-positive stress
+evidence_origin: REAL_MEASUREMENT
+source_requirement: NON_DRONE_REFERENCE
+acceptance:
+  source_hashes_present: true
+  source_unmodified: true
+  non_drone_label_preserved: true
+  system_output_recorded: true
+  false_positive_claim_only_if_output_meets_declared_detection_rule: true
+status: AWAITING_SOURCE_ACQUISITION
