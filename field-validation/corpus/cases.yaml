@@ -1,0 +1,23 @@
+corpus: PAMIR-CUAS-Field-Validation-v1
+cases:
+  - id: C-FV01
+    name: nominal multi-sensor agreement
+    origin: REAL_MEASUREMENT
+  - id: C-FV02
+    name: radar/RF disagreement
+    origin: OBSERVED_IF_PRESENT_ELSE_CONTROLLED
+  - id: C-FV03
+    name: missing sensor evidence
+    origin: CONTROLLED_PERTURBATION
+  - id: C-FV04
+    name: stale/delayed observation
+    origin: CONTROLLED_PERTURBATION
+  - id: C-FV05
+    name: synchronization perturbation
+    origin: CONTROLLED_PERTURBATION
+  - id: C-FV06
+    name: confidence collapse
+    origin: DERIVED_OR_CONTROLLED
+  - id: C-FV07
+    name: non-drone false-positive stress
+    origin: REAL_MEASUREMENT
