@@ -1,0 +1,8 @@
+data/
+source_manifest.json
+figshare_inventory.json
+run_gate.json
+evidence_pack_index.json
+*.pyc
+__pycache__/
+.pytest_cache/
