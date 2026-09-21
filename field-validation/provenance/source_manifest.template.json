@@ -1,0 +1,9 @@
+{
+  "dataset_id": "TSMS-Drone",
+  "dataset_doi": "10.25452/figshare.plus.30027313",
+  "acquisition_status": "PENDING",
+  "files": [],
+  "hash_algorithm": "SHA-256",
+  "immutability_policy": "SOURCE_FILES_READ_ONLY",
+  "generated_at": null
+}
