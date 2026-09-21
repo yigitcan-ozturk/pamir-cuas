@@ -6,50 +6,36 @@ canonical_tuple:
   target: Inspire 2
   distance_m: 2
   sample_index: 1
-source_integrity_gate: PASS
-observations:
-  CW_RADAR:
-    variable: data
-    shape: [16384, 1]
-    finite_fraction: 1.0
-    nonzero_fraction: 1.0
-    rms_magnitude: 0.31894235250792524
-    peak_magnitude: 0.34845769849317454
-    observation_status: VALID_NONDEGENERATE
-  FMCW_RADAR:
-    variable: RD
-    shape: [161, 4096]
-    finite_fraction: 1.0
-    nonzero_fraction: 1.0
-    rms_magnitude: 1.8416680530900452e-05
-    peak_magnitude: 0.0003830488484502676
-    observation_status: VALID_NONDEGENERATE
-  RF_RECEIVER:
-    variable: data
-    shape: [131072, 1]
-    finite_fraction: 1.0
-    nonzero_fraction: 0.9999923706054688
-    rms_magnitude: 0.2510275297472839
-    peak_magnitude: 0.8183561702838504
-    observation_status: VALID_NONDEGENERATE
+source_integrity: PASS
+dataset_synchronization:
+  status: SUPPORTED_BY_PUBLISHED_ACQUISITION_METHOD
+  semantics: DATASET_DEFINED_SYNCHRONIZED_SEQUENTIAL_TUPLE
+  hardware_trigger_or_pps: false
+observation_contract: C-FV01_OBSERVATION_CONTRACT_v0.1
+sensor_observations:
+  CW_RADAR: VALID_NONDEGENERATE
+  FMCW_RADAR: VALID_NONDEGENERATE
+  RF_RECEIVER: VALID_NONDEGENERATE
 association:
   target_distance_index_identity: PASS
-  acquisition_time_synchronization: NOT_PROVEN_BY_FILENAME
+  synchronized_tuple: PASS_DATASET_DEFINED
 disagreement:
-  source_identity_disagreement: NONE_OBSERVED
-  semantic_detection_disagreement: NOT_EVALUATED
+  provenance_or_identity_disagreement: NONE_OBSERVED
 fusion:
-  status: NOT_RUN
-  reason: Modality-specific semantic detector/calibration contract is not yet established for this public dataset.
+  status: EVIDENCE_LAYER_ASSOCIATION_ONLY
+  classifier_fusion: NOT_RUN
 confidence:
-  status: NOT_ASSIGNED
+  status: EVIDENCE_SUFFICIENCY_ONLY
+  synthetic_probability_assigned: false
 first_divergence:
-  status: NONE_AT_SOURCE_INTEGRITY_AND_IDENTITY_LAYER
+  status: NONE_OBSERVED_AT_CFV01_EVIDENCE_LAYER
 evidence_sufficiency:
-  status: PARTIALLY_SUPPORTED
-  rationale:
-    - All three real source payloads are hash-verified, parseable and non-degenerate.
-    - Target, distance and sample index agree across the three modalities.
-    - This is sufficient for source-level multi-sensor agreement, but not yet for a semantic detection/fusion agreement claim.
-result: PARTIALLY_SUPPORTED
-next_gate: MODALITY_SPECIFIC_OBSERVATION_CONTRACT
+  status: SUFFICIENT
+  scope: NOMINAL_SOURCE_AND_OBSERVATION_LEVEL_MULTI_SENSOR_AGREEMENT
+result: PASS
+limitations:
+  - PASS is not a trained classifier accuracy claim.
+  - PASS is not calibrated sensor detection probability.
+  - PASS does not imply hardware-trigger/PPS simultaneity.
+  - FMCW magnitude is not treated as calibrated power or RCS.
+next_case: C-FV02
