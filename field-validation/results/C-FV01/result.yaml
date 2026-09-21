@@ -1,0 +1,55 @@
+case_id: C-FV01
+title: Nominal multi-sensor agreement
+dataset: TSMS-Drone
+evidence_origin: REAL_MEASUREMENT
+canonical_tuple:
+  target: Inspire 2
+  distance_m: 2
+  sample_index: 1
+source_integrity_gate: PASS
+observations:
+  CW_RADAR:
+    variable: data
+    shape: [16384, 1]
+    finite_fraction: 1.0
+    nonzero_fraction: 1.0
+    rms_magnitude: 0.31894235250792524
+    peak_magnitude: 0.34845769849317454
+    observation_status: VALID_NONDEGENERATE
+  FMCW_RADAR:
+    variable: RD
+    shape: [161, 4096]
+    finite_fraction: 1.0
+    nonzero_fraction: 1.0
+    rms_magnitude: 1.8416680530900452e-05
+    peak_magnitude: 0.0003830488484502676
+    observation_status: VALID_NONDEGENERATE
+  RF_RECEIVER:
+    variable: data
+    shape: [131072, 1]
+    finite_fraction: 1.0
+    nonzero_fraction: 0.9999923706054688
+    rms_magnitude: 0.2510275297472839
+    peak_magnitude: 0.8183561702838504
+    observation_status: VALID_NONDEGENERATE
+association:
+  target_distance_index_identity: PASS
+  acquisition_time_synchronization: NOT_PROVEN_BY_FILENAME
+disagreement:
+  source_identity_disagreement: NONE_OBSERVED
+  semantic_detection_disagreement: NOT_EVALUATED
+fusion:
+  status: NOT_RUN
+  reason: Modality-specific semantic detector/calibration contract is not yet established for this public dataset.
+confidence:
+  status: NOT_ASSIGNED
+first_divergence:
+  status: NONE_AT_SOURCE_INTEGRITY_AND_IDENTITY_LAYER
+evidence_sufficiency:
+  status: PARTIALLY_SUPPORTED
+  rationale:
+    - All three real source payloads are hash-verified, parseable and non-degenerate.
+    - Target, distance and sample index agree across the three modalities.
+    - This is sufficient for source-level multi-sensor agreement, but not yet for a semantic detection/fusion agreement claim.
+result: PARTIALLY_SUPPORTED
+next_gate: MODALITY_SPECIFIC_OBSERVATION_CONTRACT
