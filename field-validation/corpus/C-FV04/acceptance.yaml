@@ -1,0 +1,11 @@
+id: C-FV04
+name: stale/delayed observation
+evidence_origin: CONTROLLED_PERTURBATION
+perturbation: SENSOR_DELAY
+acceptance:
+  immutable_source_reference: true
+  delayed_sensor_recorded: true
+  injected_delay_recorded: true
+  first_divergence_recorded: true
+  no_claim_of_native_hardware_timestamp: true
+status: HARNESS_READY_SOURCE_PENDING
