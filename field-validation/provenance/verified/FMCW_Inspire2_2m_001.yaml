@@ -1,0 +1,27 @@
+dataset_id: TSMS-Drone
+source_doi: 10.25452/figshare.plus.30027313
+sensor: FMCW_RADAR
+target: Inspire 2
+distance_m: 2
+sample_index: 1
+source_filename: Inspire 2_2m_001.mat
+bytes: 10128078
+sha256: 53a73f340ac13f4ed4fac5ac92a5d0743f0c1a72405c84aaa00db7cd342c3bbc
+md5: 2dbbe6c6cbc487d0ef03f6685f678a4d
+matlab_format: MATLAB_5
+matlab_created: "Thu Apr 13 15:12:52 2023"
+variables:
+  RD:
+    shape: [161, 4096]
+    dtype: complex128
+    complex: true
+contract:
+  expected_variable: RD
+  expected_shape: [161, 4096]
+  result: PASS
+evidence_origin: REAL_MEASUREMENT
+source_integrity_status: VERIFIED_LOCAL_PAYLOAD
+notes:
+  - Hashes were independently computed from the uploaded source payload.
+  - Filename, target, distance and sample index align with the verified CW sample.
+  - This verifies the FMCW source measurement; RF remains required for the three-sensor C-FV01 gate.
