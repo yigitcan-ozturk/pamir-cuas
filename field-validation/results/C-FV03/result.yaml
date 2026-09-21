@@ -1,0 +1,7 @@
+case_id: C-FV03
+result: PASS
+origin: CONTROLLED_PERTURBATION
+first_divergence: EVIDENCE_AVAILABILITY
+causal_reconstruction: RF_OBSERVATION_WITHHELD
+evidence_sufficiency: INSUFFICIENT_EVIDENCE
+source_measurements_modified: false
