@@ -1,0 +1,11 @@
+case_id: C-FV03
+title: Missing sensor evidence
+origin: CONTROLLED_PERTURBATION
+base_case: C-FV01
+immutable_source_payloads: true
+operation:
+  modality: RF_RECEIVER
+  type: OBSERVATION_WITHHELD
+  source_samples_modified: false
+expected_first_divergence: EVIDENCE_AVAILABILITY
+expected_evidence_status: INSUFFICIENT_EVIDENCE
