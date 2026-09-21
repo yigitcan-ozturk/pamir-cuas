@@ -1,0 +1,12 @@
+{
+  "manifest_version": "0.1",
+  "case_id": "C-FV01",
+  "inputs": [
+    {"sensor":"CW_RADAR","sha256":"ea024a8e50a82ee0ca55a2dc235563db898b2509c49ece2c115703701ad2d6fa","variable":"data","shape":[16384,1]},
+    {"sensor":"FMCW_RADAR","sha256":"53a73f340ac13f4ed4fac5ac92a5d0743f0c1a72405c84aaa00db7cd342c3bbc","variable":"RD","shape":[161,4096]},
+    {"sensor":"RF_RECEIVER","sha256":"e0d6906f9e86f4176a5d605637e055d1970926569f37c170442f2563fc376f33","variable":"data","shape":[131072,1]}
+  ],
+  "deterministic_metrics": ["shape","finite_fraction","nonzero_fraction","rms_magnitude","peak_magnitude"],
+  "result": "PARTIALLY_SUPPORTED",
+  "limitations": ["No modality-specific semantic detector/calibration contract applied","Acquisition-time synchronization not inferred from filename/index identity"]
+}
