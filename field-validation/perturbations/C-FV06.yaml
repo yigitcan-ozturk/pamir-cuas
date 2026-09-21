@@ -1,0 +1,13 @@
+case_id: C-FV06
+title: Confidence collapse
+origin: CONTROLLED_PERTURBATION
+base_case: C-FV01
+immutable_source_payloads: true
+operation:
+  type: EVIDENCE_SUFFICIENCY_COLLAPSE
+  source_samples_modified: false
+  trigger: MULTIPLE_REQUIRED_MODALITIES_UNAVAILABLE_OR_INVALID
+expected_first_divergence: EVIDENCE_SUFFICIENCY
+expected_evidence_status: INSUFFICIENT_EVIDENCE
+notes:
+  - No artificial numeric probability is generated.
