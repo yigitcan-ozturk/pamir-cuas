@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PAMIR-CUAS Field Validation Evidence Object",
+  "type": "object",
+  "required": ["case_id","source","evidence_origin","timestamp_integrity","observations","evidence_sufficiency","reproducibility"],
+  "properties": {
+    "case_id": {"type":"string","pattern":"^C-FV0[1-7]$"},
+    "source": {"type":"object"},
+    "evidence_origin": {"enum":["REAL_MEASUREMENT","CONTROLLED_PERTURBATION","DERIVED_FROM_REAL_MEASUREMENT"]},
+    "perturbation": {"type":["object","null"]},
+    "timestamp_integrity": {"type":"object"},
+    "observations": {"type":"array"},
+    "association": {"type":"object"},
+    "disagreement": {"type":"object"},
+    "fusion": {"type":"object"},
+    "confidence": {"type":"object"},
+    "first_divergence": {"type":["object","null"]},
+    "causal_reconstruction": {"type":"object"},
+    "evidence_sufficiency": {"enum":["SUFFICIENT","PARTIALLY_SUPPORTED","INSUFFICIENT_EVIDENCE","UNKNOWN"]},
+    "reproducibility": {"type":"object"}
+  }
+}
