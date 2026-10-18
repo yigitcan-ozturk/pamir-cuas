@@ -1,0 +1,26 @@
+name: CUAS Evidence Integrity Checks
+
+on:
+  push:
+    branches:
+      - docs/pilot-acceptance-v1
+  pull_request:
+    paths:
+      - 'tools/**'
+      - 'tests/**'
+      - '.github/workflows/evidence-integrity.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  evidence-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run evidence integrity unit tests
+        run: python -m unittest discover -s tests -v
