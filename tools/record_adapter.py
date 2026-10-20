@@ -30,7 +30,13 @@ def load_records(path, *, max_records=100000):
                 raise ValueError("missing or duplicate CSV headers")
             if set(reader.fieldnames) != set(FIELDS):
                 raise ValueError("CSV schema must contain exactly required fields")
-            raw = list(reader)
+            raw = []
+            for row in reader:
+                if len(raw) >= max_records:
+                    raise ValueError("record limit exceeded")
+                if None in row:
+                    raise ValueError("extra CSV columns")
+                raw.append(row)
     else:
         raise ValueError("only .json and .csv supported")
     if not isinstance(raw, list) or len(raw) > max_records:
@@ -39,6 +45,8 @@ def load_records(path, *, max_records=100000):
     for index, item in enumerate(raw):
         if not isinstance(item, dict) or set(item) != set(FIELDS):
             raise ValueError(f"record {index}: unexpected or missing fields")
+        if any(isinstance(item[key], bool) or item[key] is None for key in FIELDS[:3]):
+            raise ValueError(f"record {index}: invalid numeric type")
         try:
             row = {
                 "time_s": float(item["time_s"]),
