@@ -26,17 +26,28 @@ def missed_detections(reference_times, detection_times, tolerance_s):
     dets = [_time(t) for t in detection_times]
     if refs != sorted(refs) or dets != sorted(dets):
         raise ValueError("timestamps must be sorted")
-    candidates = sorted(
-        (abs(r - d), i, j)
-        for i, r in enumerate(refs)
-        for j, d in enumerate(dets)
-        if abs(r - d) <= tolerance
-    )
-    used_refs, used_dets = set(), set()
-    for _, i, j in candidates:
-        if i not in used_refs and j not in used_dets:
-            used_refs.add(i)
-            used_dets.add(j)
+    # Maximum-cardinality one-to-one matching, with deterministic ordering.
+    # Greedy nearest-first matching can falsely mark a reference as missed.
+    neighbors = [
+        sorted((j for j, d in enumerate(dets) if abs(r - d) <= tolerance),
+               key=lambda j: (abs(r - dets[j]), j))
+        for r in refs
+    ]
+    owner = {}
+
+    def augment(i, seen):
+        for j in neighbors[i]:
+            if j in seen:
+                continue
+            seen.add(j)
+            if j not in owner or augment(owner[j], seen):
+                owner[j] = i
+                return True
+        return False
+
+    for i in range(len(refs)):
+        augment(i, set())
+    used_refs = set(owner.values())
     return {"reference_count": len(refs), "matched_count": len(used_refs),
             "unmatched_reference_indices": [i for i in range(len(refs)) if i not in used_refs],
             "evaluation": "TEMPORAL_ONLY_NOT_FULL_MISSED_DETECTION"}
