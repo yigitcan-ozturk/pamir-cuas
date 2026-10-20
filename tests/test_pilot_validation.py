@@ -30,6 +30,21 @@ class PilotValidationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             association_divergence(None, [])
 
+    def test_maximum_cardinality_adversarial(self):
+        # Greedy nearest-first matches reference 0 to detection 0,
+        # leaving reference 1 unmatched; maximum matching matches both.
+        result = missed_detections([0.0, 0.3], [-0.2, 0.05], 0.26)
+        self.assertEqual(result["matched_count"], 2)
+        self.assertEqual(result["unmatched_reference_indices"], [])
+
+    def test_nonfinite_time_rejected(self):
+        with self.assertRaises(ValueError):
+            missed_detections([float("nan")], [0.0], 0.1)
+
+    def test_duplicate_detection_not_reused(self):
+        result = missed_detections([1.0, 1.0, 1.0], [1.0, 1.0], 0)
+        self.assertEqual(result["matched_count"], 2)
+
     def test_identical_lineage(self):
         self.assertEqual(association_divergence([[1, "A", "o"]], [[1, "A", "o"]])["status"], "AGREEMENT")
 
